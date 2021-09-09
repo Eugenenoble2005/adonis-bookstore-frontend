@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <span>AdonisJs/Angular Book Register</span>
+    <div style = "width:100%;text-align:right">
+        <button mat-raised-button color="primary" routerLink = "login">Login</button>
+        <button mat-raised-button color="warn" routerLink = "register">Register</button>
+    </div>
+</mat-toolbar>
+<div *ngIf = "isAuth">
+    Welcome Admin
+    <button mat-raised-button color="warn" routerLink = "newbook">Add New Book</button>
+    <br><br>
+    <div *ngFor = "let book of books">
+       <h1 style="font-size:20px;"> {{ book.book_name }}</h1>
+       <ol>
+           <li>Book Author: {{ book.book_author }} </li>
+           <li> Book Page: {{ book.no_of_pages }} </li>
+           <a (click) = "deleteBook( book.id )"> Delete </a>
+       </ol>
+    </div>
+
+</div>

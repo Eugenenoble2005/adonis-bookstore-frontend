@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <span>Login</span>
+</mat-toolbar>
+<form #login = "ngForm" (ngSubmit) = "Login(login.value)">
+  <p style = "text-align: center;"> {{ error }} </p>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Your username" name = "email" id = "username" ngModel>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Your desired Password" name = "pass" ngModel>
+  </mat-form-field>
+  <button mat-raised-button color="warm" style="text-align: center;">Login</button>
+  </form>

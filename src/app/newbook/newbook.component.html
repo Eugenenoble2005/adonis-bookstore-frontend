@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <span>Create A New Book</span>
+</mat-toolbar>
+<form #newBook = "ngForm" (ngSubmit) = "NewBook(newBook.value)">
+  <p style = "text-align: center;"> {{ error }} </p>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Book Name</mat-label>
+    <input matInput placeholder="Book Name" name = "bname" ngModel>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Book Author</mat-label>
+    <input matInput placeholder="Book Author" name = "bauthor" ngModel>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>No Of Pages</mat-label>
+    <input matInput placeholder="No Of Pages" name = "npages" ngModel>
+  </mat-form-field>
+  <button mat-raised-button color="warm" style="text-align: center;">Add Book</button>
+  </form>
