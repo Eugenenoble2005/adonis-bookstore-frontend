@@ -8,7 +8,7 @@ export class ApiService {
     public $router:Router
   ) { }
   base(){
-    return "http://localhost:3333"
+    return "http://164.90.216.246:4000"
   }
 token = window.localStorage.getItem("auth_token");
   getToken(){
