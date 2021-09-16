@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
         var token = rez.token["token"]
         window.localStorage.setItem("auth_token",token);
         this.$auth.setAuthStatus(true);
+        window.location.reload();
         this.$router.navigate(["/"])
       }
       else{
